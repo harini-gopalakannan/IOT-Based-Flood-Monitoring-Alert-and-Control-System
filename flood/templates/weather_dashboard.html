@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="hero">
+<h1>Weather Dashboard</h1>
+<p class="live-badge">OpenWeather API</p>
+<p class="location">Chennai</p>
+</div>
+
+<div class="main-container">
+
+<div class="top-cards">
+
+<div class="card">
+<h3>Temperature</h3>
+<h2 id="tempValue">-- °C</h2>
+</div>
+
+<div class="card">
+<h3>Humidity</h3>
+<h2 id="humidityValue">-- %</h2>
+</div>
+
+<div class="card">
+<h3>Pressure</h3>
+<h2 id="pressureValue">-- hPa</h2>
+</div>
+
+<div class="card">
+<h3>Rainfall</h3>
+<h2 id="rainValue">-- mm/hr</h2>
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+
+async function loadWeather(){
+
+const response = await fetch("/data")
+const data = await response.json()
+
+document.getElementById("tempValue").innerText = data.temperature + " °C"
+document.getElementById("humidityValue").innerText = data.humidity + " %"
+document.getElementById("pressureValue").innerText = data.pressure + " hPa"
+document.getElementById("rainValue").innerText = data.rainfall + " mm/hr"
+
+}
+
+loadWeather()
+setInterval(loadWeather,5000)
+
+</script>
+
+{% endblock %}

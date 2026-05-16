@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Flood Monitoring System</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+
+{% block content %}{% endblock %}
+
+{% block scripts %}{% endblock %}
+
+</body>
+</html>

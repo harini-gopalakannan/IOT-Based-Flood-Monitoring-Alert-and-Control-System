@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="hero">
+<h1>Smart Flood Monitoring</h1>
+<p class="live-badge">Real-time IoT Sensor Data</p>
+<p class="location">Chennai</p>
+</div>
+
+<div class="main-container">
+
+<div class="top-cards">
+
+<!-- Rain Sensor -->
+<div class="card">
+<h3>Rain Sensor</h3>
+<h2 id="rainValue">--</h2>
+<p id="rainStatus"></p>
+
+<div class="progress">
+<div id="rainBar" class="progress-fill"></div>
+</div>
+
+</div>
+
+<!-- Water Level -->
+<div class="card">
+<h3>Water Level</h3>
+<h2 id="waterValue">-- cm</h2>
+<p class="sub">Ultrasonic Sensor</p>
+</div>
+
+<!-- Flood Risk -->
+<div class="card" id="riskCard">
+<h3>Flood Risk</h3>
+<h2 id="riskStatus">--</h2>
+</div>
+
+<!-- Flood Risk Score -->
+<div class="card">
+<h3>Flood Risk Score</h3>
+<h2 id="riskScore">-- %</h2>
+<p class="sub">Multi-factor analysis</p>
+</div>
+
+<!-- Temperature -->
+<div class="card">
+<h3>Temperature</h3>
+<h2 id="tempValue">-- °C</h2>
+<p class="sub">OpenWeather API</p>
+</div>
+
+<!-- Humidity -->
+<div class="card">
+<h3>Humidity</h3>
+<h2 id="humidityValue">-- %</h2>
+</div>
+
+<!-- Pressure -->
+<div class="card">
+<h3>Pressure</h3>
+<h2 id="pressureValue">-- hPa</h2>
+</div>
+
+<!-- Pump Status -->
+<div class="card">
+<h3>Pump</h3>
+
+<div id="motorToggle" class="toggle">
+<div class="toggle-circle"></div>
+</div>
+
+<p class="sub">Automatic Control</p>
+
+</div>
+
+<!-- Email Alert Status -->
+<div class="card">
+<h3>Email Alert</h3>
+<h2 id="emailStatus">No Alert</h2>
+<p class="sub">Notification System</p>
+</div>
+
+</div>
+
+
+<!-- SENSOR CHARTS -->
+<div class="section">
+
+<h2>Sensor Trends</h2>
+
+<div class="chart-container">
+
+<div class="chart-card">
+<canvas id="rainChart"></canvas>
+</div>
+
+<div class="chart-card">
+<canvas id="waterChart"></canvas>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MAP -->
+<div class="section">
+
+<h2>Monitoring Location</h2>
+
+<div class="map-card">
+
+<div id="map"></div>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+
+{% endblock %}
