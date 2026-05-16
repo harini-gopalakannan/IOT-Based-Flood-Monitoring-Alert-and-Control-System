@@ -15,22 +15,6 @@ When the system detects warning or danger conditions, it can send email alerts a
 - SMTP email alerts for warning and danger states.
 - State-based alerting to avoid duplicate emails during sustained risk conditions.
 
-## Project Structure
- 
-```
-flood-monitoring-system/
-├── esp32/
-│   └── flood_monitor.ino       # ESP32 Arduino firmware
-├── backend/
-│   ├── app.py                  # Flask server
-│   └── requirements.txt        # Python dependencies
-├── dashboard/
-│   ├── index.html              # Web dashboard
-│   ├── style.css
-│   └── script.js
-└── README.md
-```
-
 ## Setup
 
 ### Hardware
