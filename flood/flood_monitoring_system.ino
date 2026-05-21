@@ -9,8 +9,8 @@
 
 #define RAIN_THRESHOLD 2000
 
-const char* ssid = "Galaxy";
-const char* password = "sb27*19L";
+const char* ssid = "ssid";
+const char* password = "pswd";
 
 String serverName = "http://10.191.250.20:5000/sensor";
 
