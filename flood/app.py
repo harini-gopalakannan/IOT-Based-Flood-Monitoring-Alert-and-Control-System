@@ -13,10 +13,10 @@ last_risk_status = "SAFE"
 email_status = "No Alert"
 
 # ===== OPENWEATHER API =====
-API_KEY = "1b9d101eed4150f5a6d422911e4587d0"
+API_KEY = "YOUR_API_KEY"
 
-LAT = 13.0878
-LON = 80.2785
+LAT = Enter Latitude
+LON = Enter Longitude
 
 
 # ===== WEATHER DATA =====
